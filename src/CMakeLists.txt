@@ -43,7 +43,7 @@ add_library(pvmp3decoder STATIC ${SRC})
 
 target_include_directories(pvmp3decoder
         PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/../include>
-        PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/../include/pvmp3>
-        PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/pvmp3>)
+        PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/../include/pvmp3>
+        PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/pvmp3>)
 
 set_target_properties(pvmp3decoder PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
